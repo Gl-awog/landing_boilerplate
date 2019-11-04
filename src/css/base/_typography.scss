@@ -1,0 +1,127 @@
+body {
+    @include font-main;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.43;
+}
+
+h1 {
+    @include font-header;
+    font-weight: 700;  
+    line-height: 1.13;
+    @include fluidProperty(font-size, 36, 56, var(--breakpointDesktop), var(--maxWidth));
+
+    @include breakpoint(mobile) {
+        font-size: 44px;
+        line-height: 1.21;
+    }
+}
+
+h2 {
+    @include font-header;
+    font-weight: 700;
+    line-height: 1;
+    @include fluidProperty(font-size, 24, 36, var(--breakpointDesktop), var(--maxWidth));
+
+    @include breakpoint(mobile) {
+        font-size: 30px;
+        line-height: 1.4;
+    }
+}
+
+h3 {
+    @include font-header;
+    @include fluidProperty(font-size, 12, 24, var(--breakpointDesktop), var(--maxWidth));
+    line-height: 1.25;
+    font-weight: 700;
+
+    @include breakpoint(mobile) {
+        font-size:24px;
+    }
+}
+
+h4 {
+    @include font-header;
+    @include fluidProperty(font-size, 14, 20, var(--breakpointDesktop), var(--maxWidth));
+    line-height: 1.2;
+    font-weight: 700;
+
+    @include breakpoint(mobile) {
+        font-size:20px;
+    }
+}
+
+h5 {
+    @include font-main;
+    line-height: 1.43;
+    @include fluidProperty(font-size, 10, 14, var(--breakpointDesktop), var(--maxWidth));
+
+    @include breakpoint(mobile) {
+        font-size:14px;
+    }
+}
+
+p {
+    margin-bottom: 16px;
+}
+
+.textsmall {
+    font-size:14px;
+}
+
+p.fluid {
+    @include fluidProperty(font-size, 10, 14, var(--breakpointDesktop), var(--maxWidth));
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+ul.ul {
+    padding-left: 13px;
+    margin-bottom: 40px;
+    font-size: 14px;
+
+    li {
+        margin-bottom: 8px;
+        line-height: 1.43;
+        padding-left:22px;
+
+        &:before {
+            content: "\2022";
+            color: #ffffff;
+            font-weight: 700;
+            width: 22px;           
+            margin-left: -22px;
+            display: inline-block;
+            font-size:1.4em;           
+            line-height: 1;
+            // vertical-align: bottom;
+
+        }
+    }
+}
+
+ol {
+    counter-reset: section;
+    list-style-type: none;
+    padding-left: 25px;
+    margin-bottom: 40px;
+    font-size: 14px;
+
+    li {
+        position: relative;
+        counter-increment: section;
+        margin-bottom: 8px;
+        line-height: 1.43;
+    }
+
+    li:before {
+        content: counter(section)".";
+        position: absolute;
+        left: -25px;
+        min-width: 25px;
+    }
+}

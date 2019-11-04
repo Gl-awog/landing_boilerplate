@@ -1,0 +1,35 @@
+$breakpointMob:768;
+$breakpointDesktop:769;
+
+:root {
+    --mobMaxWidth: 400px;
+    --desktopPaddingLeft: 108px;
+    --breakpointMob:#{$breakpointMob};
+    --breakpointDesktop:#{$breakpointDesktop};
+    --maxWidth: 1920;
+    --maxHeight: 1080;
+    --ratio: calc(var(--maxWidth) / var(--maxHeight));
+    --sectionMarginBottom: 56px;
+    --headerHeight:78px;
+    --mobHeaderHeight: 64px;
+
+    @media (max-width:1200px) {
+        --sectionMarginBottom: 36px;
+    }
+
+    @media (max-width: $breakpointMob + px) {
+        --sectionMarginBottom: 40px;
+    }
+}
+
+$color_gold:#ffd000;
+$color_green:#00b119;
+$color_red:#c02832;
+$color_blue:#005baa;
+$color_white:#ffffff;
+$color_darkgrey:#545454;
+$color_grey2:#212121;
+$color_grey3:#3a3a3a;
+$color_grey4:#737373;
+$color_silver:#9d9d9d;
+$color_blackbg:#0d0d0d;

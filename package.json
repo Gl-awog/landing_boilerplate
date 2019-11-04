@@ -1,0 +1,27 @@
+{
+  "name": "sass_starter_pack",
+  "version": "1.0.0",
+  "description": "Starter pack using gulp",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "Brad Traversy",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-sass": "^3.1.0"
+  },
+  "dependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.0.1",
+    "gulp-minify": "^3.1.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-strip-css-comments": "^2.0.0",
+    "gulp-wait": "0.0.2",
+    "merge2": "^1.2.3"
+  }
+}

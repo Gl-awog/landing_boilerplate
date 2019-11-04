@@ -1,0 +1,41 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    background: $color_blackbg;
+    -webkit-text-size-adjust: 100%; //fix for iOS
+
+    &.popup-open {
+        overflow: hidden;
+    }
+
+    @include breakpoint(mobile) {
+        &.mobnav-open,
+        &.popup-open {
+            overflow: hidden;
+            height: 100vh;
+            position: fixed;
+            width:100%;
+        }
+    }
+}
+
+.center {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include breakpoint(mobile) {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+.page {
+    min-height: 100%;
+    
+}

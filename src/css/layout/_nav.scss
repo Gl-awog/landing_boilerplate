@@ -1,0 +1,21 @@
+.nav {
+    &__list {
+        // height: 100%;
+        // display: flex;
+        // justify-content: space-between;
+        // align-items: center;
+    }
+
+    &__item {
+        display: inline-block;
+        // margin-right:32px;
+        @include fluidProperty(margin-right, 8, 32, var(--breakpointDesktop), var(--maxWidth));
+        text-align: center;
+        font-size: 14px;
+    }
+
+    &__link {
+        color: #ffffff;
+    }
+
+}

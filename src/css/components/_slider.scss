@@ -1,0 +1,68 @@
+.owl-carousel,
+.owl-stage-outer,
+.owl-stage,
+.owl-item {
+    height: 100%;
+}
+
+.owl-nav {
+    [class*="owl-"] {
+        width: 32px;
+        height: 32px;
+
+        span {
+            display: block;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            font-size: 0;
+            background-size: 9px auto;
+        }
+    }
+}
+
+.owl-prev span {
+    @extend .prevArrow;
+}
+
+.owl-next span {
+    @extend .nextArrow;
+}
+
+.owl-dots {
+    position: absolute;
+    z-index: 101;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0px;
+    height: 16px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    .owl-dot {
+        outline: none;
+        border:none;
+        height: 100% !important;        
+    }
+
+    .owl-dot span {
+        height: 7px !important;
+        width: 7px !important;
+        background: rgba(#ffffff, 0.5) !important;
+        border-radius: 50% !important;
+        font-size: 0;
+        margin: 0 4px !important;
+        cursor: pointer;
+        transform-origin: 50% 50%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+        box-shadow:none;
+    }
+
+    .owl-dot.active span {
+        // transform: scale(1.9);
+        // box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.3);
+        background: #ffffff !important;
+    }
+}

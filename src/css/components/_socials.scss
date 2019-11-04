@@ -1,0 +1,33 @@
+.socials {
+	display: flex;
+	margin:0 -11px;
+
+	&__item {
+		width:32px;
+		height:32px;
+		margin:0 11px;
+		display: inline-block;
+
+		span {
+			display: inline-block;
+			width:32px;
+			height:32px;
+			background-position: 50% 50%;
+			background-repeat:no-repeat;
+			background-size:contain;
+		}
+
+		&--insta span {
+			background-image:url("../images/social_insta.svg");
+		}
+
+		&--vk span {
+			background-image:url("../images/social_vk.svg");
+		}
+	}
+
+	&__item-link {
+		display: block;
+		height: 100%;
+	}
+}

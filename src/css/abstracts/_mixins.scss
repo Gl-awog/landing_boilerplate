@@ -1,0 +1,40 @@
+@mixin breakpoint($point, $mediaproperty:max-width) {
+
+    @if $point==mobile {
+        @media (max-width: $breakpointMob + px) {
+            @content ;
+        }
+    }
+
+    @else if $point==desktop {
+        @media (min-width: $breakpointDesktop + px) {
+            @content ;
+        }
+    }
+
+    @else {
+        @media ($mediaproperty: $point + px) {
+            @content ;
+        }
+    }
+}
+
+@mixin font-main {
+    font-family: 'Open Sans', sans-serif;
+}
+
+@mixin font-header {
+    font-family: 'Roboto', sans-serif;
+}
+
+@mixin mobBtn {
+    width: 100%;
+    max-width: 308px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+@mixin fluidProperty($property, $min, $max, $minViewportWidth, $maxViewportWidth) {
+    #{$property}: calc(#{$min} * 1px + (#{$max} - #{$min}) * ((100vw - (#{$minViewportWidth} * 1px)) / (#{$maxViewportWidth} - #{$minViewportWidth})));
+}

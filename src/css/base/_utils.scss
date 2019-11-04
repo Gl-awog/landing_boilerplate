@@ -1,0 +1,73 @@
+.gold {
+	  color: #ffd000;
+}
+
+.bold,
+strong {
+	font-weight: 700;
+}
+
+img.fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.textcenter {
+    text-align: center;
+}
+
+.visible-xs,
+.visible-sm,
+.visible-md,
+.visible-sm-flex,
+.visible-xs-flex,
+.visible-sm-inlineflex,
+.visible-xs-inlineflex {
+    display: none !important;
+}
+
+// @media (max-width:992px) {
+//     .hidden-md {
+//         display: none !important;
+//     }
+
+//     .visible-md {
+//         display: block !important;
+//     }
+// }
+
+@include breakpoint(mobile) {
+    .hidden-sm {
+        display: none !important;
+    }
+
+    .visible-sm {
+        display: block !important;
+    }
+
+    .visible-sm-flex {
+        display: flex !important;
+    }
+
+    .visible-sm-inlineflex {
+        display: inline-flex !important;
+    }
+}
+
+// @media (max-width:575px) {
+//     .hidden-xs {
+//         display: none !important;
+//     }
+
+//     .visible-xs {
+//         display: block !important;
+//     }
+
+//     .visible-xs-flex {
+//         display: flex !important;
+//     }
+
+//     .visible-xs-inlineflex {
+//         display: inline-flex !important;
+//     }
+// }

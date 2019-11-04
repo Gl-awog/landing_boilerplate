@@ -1,0 +1,27 @@
+.main {
+    position: relative;
+
+
+
+    &__inner {
+        @extend .center;
+    }
+
+    @include breakpoint(mobile) {
+        padding-top: var(--mobHeaderHeight);
+        background: none;
+
+
+    }
+}
+
+.inner {
+    // .section {
+    // 	padding-bottom: 80px;
+    // }
+
+    @include breakpoint(mobile) {
+        padding-top: var(--mobHeaderHeight);
+        // padding-bottom: 0;
+    }
+}

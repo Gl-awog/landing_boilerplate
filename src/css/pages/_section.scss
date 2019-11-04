@@ -1,0 +1,103 @@
+.section {
+    height: calc(100vh - var(--headerHeight));
+    min-height: 500px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+    box-sizing:border-box;
+
+    &__wrapper {
+        @extend .center;
+        height: 100%;
+        text-align: center;
+    }
+
+    &__heading {
+        text-align: center;
+        margin-bottom: 36px;
+        padding-top: 5px;
+    }
+
+    &__subheading {
+        text-align: center;
+        @include fluidProperty(font-size, 14, 30, var(--breakpointDesktop), var(--maxWidth));
+        margin-bottom:calc(var( --sectionMarginBottom) * 0.5)
+    }
+
+    &__btns {
+        text-align: center;
+
+        .btn {
+            width: 100%;
+            max-width: 250px;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        min-height: auto;
+        padding-bottom: 80px;
+
+        h2 {
+            text-align: center;
+        }
+
+        &__heading {
+            padding-top: 0;
+            margin-bottom: 16px;
+        }
+
+        &__subheading {
+            font-size: 16px;
+        }
+
+        &__btns {
+
+            .btn {
+                min-width: 150px;
+            }
+        }
+    }
+}
+
+.hero {
+    background: url("../images/bg.jpg") no-repeat 50% 0;
+    background-size: 100% auto;
+    height: 100%;
+    max-height: var(--maxHeight);
+    padding-bottom: calc(160 / 1080 * 100vw / var(--ratio));
+
+    .section__wrapper {
+        display: flex;
+        justify-content: center;
+        padding-top: calc(665 / 1080 * 100vw / var(--ratio));
+        position: relative;
+        z-index: 1;
+    }
+
+    &__txt {
+        @include fluidProperty(max-width, 400, 900, var(--breakpointDesktop), var(--maxWidth));
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    @include breakpoint(mobile) {
+        padding-bottom: 80px;
+        background-size: cover;
+
+        .section__subheading {
+            font-size: 16px;
+        }
+    }
+}
+
+.section:not(.hero) {
+
+    .section__wrapper { 
+        display: flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+    }
+}

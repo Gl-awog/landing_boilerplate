@@ -1,0 +1,34 @@
+<main class="main">
+    <section class="section hero" id="hero" data-aos="fade-custom" data-aos-duration="1000" data-aos-delay="0" data-aos-anchor-placement="center-bottom" data-aos-offset="100">
+        <div class="section__wrapper">
+            <div class="hero__txt" >
+                <h1 class="hero__heading">Hero section</h1>
+                <h3 class="section__subheading">Hero subheading</h3>
+                <div class="section__btns hero__btns">
+                    <a href="#" class="btn btn--big btn--primary">Do it</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section1" id="section1">
+        <div class="section__wrapper" data-aos="fade-up-custom" data-aos-duration="1000" data-aos-delay="0" data-aos-anchor-placement="center-bottom" data-aos-offset="100">
+            <h2 class="section__heading">Section 1</h2>
+            <h3 class="section__subheading">Section subheading</h3>
+            @@include('section1.html')
+        </div>
+    </section>
+    <section class="section section2" id="section2">
+        <div class="section__wrapper" data-aos="fade-up-custom" data-aos-duration="1000" data-aos-delay="0" data-aos-anchor-placement="center-bottom" data-aos-offset="100">
+            <h2 class="section__heading">Section 2</h2>
+            <h3 class="section__subheading">Section subheading</h3>
+            @@include('section2.html', { "innerClass": "justClass"})
+        </div>
+    </section>
+    <section class="section section3" id="section3">        
+        <div class="section__wrapper" data-aos="fade-up-custom" data-aos-duration="1000" data-aos-delay="0" data-aos-anchor-placement="center-bottom" data-aos-offset="100">
+            <h2 class="section__heading">Section 3</h2>
+            <h3 class="section__subheading">Section subheading</h3>
+            @@include('section3.html')
+        </div>
+    </section>
+</main>
